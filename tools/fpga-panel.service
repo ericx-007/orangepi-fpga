@@ -1,0 +1,17 @@
+[Unit]
+Description=FPGA display and button control panel
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/fpga-panel
+ExecStart=/usr/bin/python3 /opt/fpga-panel/server.py --bind 127.0.0.1 --http-port 8088
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

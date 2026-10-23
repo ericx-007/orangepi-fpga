@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.lic
+*.key
+*.pem
+vendor/
+build/
+rtl/impl/
+*.fs
+*.bin
+*.exe
+*.zip
+*.tar.gz
+*.log
